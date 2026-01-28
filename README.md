@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="LIP.png" width="300" />
+  <img src="LIPtp.png" width="300" />
 </p>
 
 # Let It Pump (LIP)
