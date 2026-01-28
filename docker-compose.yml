@@ -1,0 +1,23 @@
+services:
+  pump-engine:
+    build: .
+    environment:
+      - CLUSTER=${CLUSTER:-devnet}
+      - RPC_URL=${RPC_URL}
+      - SIGNER_KEYPAIR_PATH=/run/secrets/engine_keypair
+      - LIP_MINT=${LIP_MINT}
+      - FEE_MINT=${FEE_MINT}
+      - FEE_VAULT=${FEE_VAULT}
+      - MIN_FEE_BALANCE=${MIN_FEE_BALANCE:-0.05}
+      - MAX_BUY_AMOUNT=${MAX_BUY_AMOUNT:-0.02}
+      - COOLDOWN_SECONDS=${COOLDOWN_SECONDS:-600}
+      - SLIPPAGE_BPS=${SLIPPAGE_BPS:-150}
+      - RANDOMIZE_WINDOW_SECONDS=${RANDOMIZE_WINDOW_SECONDS:-120}
+      - DRY_RUN=${DRY_RUN:-true}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+    secrets:
+      - engine_keypair
+
+secrets:
+  engine_keypair:
+    file: ./secrets/engine-keypair.json

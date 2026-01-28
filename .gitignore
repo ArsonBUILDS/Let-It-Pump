@@ -1,0 +1,14 @@
+node_modules
+dist
+coverage
+.env
+.env.*
+.DS_Store
+*.log
+.cache
+.pnpm-store
+.idea
+.vscode
+*.pem
+*.key
+*.secret

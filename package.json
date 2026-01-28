@@ -1,0 +1,14 @@
+{
+  "name": "@lip/core",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier -w .",
+    "test": "node --test",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}
